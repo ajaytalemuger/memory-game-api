@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/game-boards
+
 # testing
 /coverage
 

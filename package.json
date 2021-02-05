@@ -2,9 +2,11 @@
   "name": "memory-game-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/pp.js",
+    "dev": "nodemon src/app.js"
   },
   "author": "Ajay Talemuger",
   "license": "ISC",
@@ -13,6 +15,9 @@
   },
   "homepage": "https://github.com/ajaytalemuger/memory-game-api#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "short-uuid": "^4.1.0"
   }
 }
