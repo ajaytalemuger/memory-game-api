@@ -17,6 +17,8 @@ var corsOptions = {
     origin: 'http://localhost:3000'
 }
 
+createGameBoardsFolder();
+
 app.use(cors(corsOptions));
 
 app.get("/getGameCardValue", requestValidation.validateFileId, requestValidation.validateCardId, (req, res) => {
@@ -86,6 +88,13 @@ function shuffleArray(array) {
 
 function getNewFileId() {
     return short().new();
+}
+
+function createGameBoardsFolder() {
+    if (!fs.existsSync(path.join(__dirname, '../game-boards'))) {
+        fs.mkdirSync(path.join(__dirname, '../game-boards'));
+        console.log("game-boards folder created");
+    }
 }
 
 app.listen(PORT, () => {
